@@ -3,12 +3,15 @@
 {% block content %}
   <div class="row">
     <div class="col m-4">
-      <h3>{{ page.name }} <small class="text-muted">
+      <h3>{{ page.title }} <small class="text-muted">Last updated {{ page.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ page.author.username }}</b></small></h3>
       <hr>
-      <p>{{ page.description|linebreaksbr }}</p>
+      <p>{{ page.content|linebreaksbr }}</p>
+
+      {% load static %}
+        <img src="{% static 'backpack1.jpeg' %}" alt="My image">
 
       <hr>
-      <a href="{% url 'resume-list-page' %}">Back to List</a>
+      <a href="{% url 'item-list-page' %}">Back to List</a>
     </div>
   </div>
 {% endblock %}

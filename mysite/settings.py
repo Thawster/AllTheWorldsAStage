@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     'alltheworldsastage.herokuapp.com',
-
+    '127.0.0.1',
 ]
 
 
