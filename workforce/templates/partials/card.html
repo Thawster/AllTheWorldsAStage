@@ -1,0 +1,12 @@
+<div class="card mb-3">
+    <h5 class="card-header ">{{ clown.name }}</h5>
+    <div class="card-body border-dark">
+      <p class="card-text text-dark">
+        {{ clown.description|truncatewords_html:30 }}
+        <hr>
+        <div class="text-right"><a href="{% url 'resume-details-page' clown.slug %}" title="Read More">Read More</a></div>
+    </div>
+    <div class="card-footer">
+    </div>
+  </div>
+  

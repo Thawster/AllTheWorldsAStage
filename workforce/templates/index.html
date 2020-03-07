@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h3>Clowns {% if clowns %}<small class="text-muted">({{ clowns|length }} Clown{{ clowns|length|pluralize:"s" }})</small>{% endif %}</h3>
+  <hr>
+  {% if clowns %}
+    <div class="card-columns">
+      {% for clown in clowns %}
+        {% include "partials/card.html" %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-primary" role="alert">No Resumes to display.</div>
+  {% endif %}
+
+{% endblock %}
